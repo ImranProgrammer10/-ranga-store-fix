@@ -49,14 +49,8 @@ body {
   width: 150px;
   height: 150px;
 }
-.rate{
-  color:#f57224;
-  font-weight: 700;
-}
-.count{
-  font-weight: 700;
-  color: rgb(136, 100, 9);
-}
+ 
+ 
 .cart {
   width: 285px;
   /* border: 1px solid green; */

@@ -11,8 +11,8 @@ const loadProducts = () => {
 const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
-    // const avg_rate = product.rating.rate;
-    // const rating_count = product.rating.count;
+    const avg_rate = product.rating.rate;
+    const rating_count = product.rating.count;
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
@@ -24,12 +24,7 @@ const showProducts = (products) => {
       <p>Category: ${product.category}</p>
       <h2 class="mb-0" >Price: $ ${product.price}</h2>
       <p>Category: ${product.category}</p>
-      <p>Avg.Rate: <span class="rate"> <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="far fa-star"></i>  ${product.rating.rate} </span></p>
-      <p><i class="fas fa-user"></i> Users : <span class="count"> ${product.rating.count}</span></p>
+      <small class="  bg-warning  px-2 "> Avg.Rating: ${avg_rate} (${rating_count}) </small>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       <button id="details-btn" class="btn btn-danger">Details</button></div>
       `;
