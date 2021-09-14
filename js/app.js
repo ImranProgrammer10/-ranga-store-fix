@@ -20,7 +20,7 @@ const showProducts = (products) => {
       <div>
     <img class="product-image" src=${image}></img>
       </div>
-      <h5>${product.title.slice(0, 10)}</h5>
+      <h5>${product.title}</h5>
       <p>Category: ${product.category}</p>
       <h2 class="mb-0" >Price: $ ${product.price}</h2>
       <p>Category: ${product.category}</p>
@@ -63,7 +63,7 @@ const updatePrice = (id, value) => {
 
 // set innerText function
 const setInnerText = (id, value) => {
-  document.getElementById(id).innerText = total.toFixed(2);
+  document.getElementById(id).innerText = value.toFixed(2);
 };
 
 // update delivery charge and total Tax
